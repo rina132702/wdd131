@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
 :root {
     --primary-color: #006994;
     --secondary-color: #f4c95d;
@@ -19,6 +17,8 @@ body {
     color: var(--text-color);
 }
 
+/* Header */
+
 header {
     background-color: var(--primary-color);
     color: var(--accent-color);
@@ -31,6 +31,8 @@ h1 {
     margin: 0;
     font-size: 2rem;
 }
+
+/* Hero */
 
 .hero {
     position: relative;
@@ -47,10 +49,13 @@ h1 {
     object-fit: cover;
 }
 
+/* Information Cards */
+
 .card {
     background-color: var(--accent-color);
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     text-align: center;
+    border-bottom: 1px solid #cccccc;
 }
 
 .card h2 {
@@ -77,12 +82,16 @@ dd {
     text-align: left;
 }
 
+/* Weather */
+
 .weather-icon {
     display: block;
     width: 70px;
     height: 70px;
     margin: 0 auto 1rem;
 }
+
+/* Footer */
 
 footer {
     background-color: var(--primary-color);
@@ -100,6 +109,7 @@ footer p {
 }
 
 /* Wider View */
+
 @media screen and (min-width: 700px) {
 
     h1 {
@@ -116,6 +126,7 @@ footer p {
         position: absolute;
         background-color: var(--card-background);
         padding: 1rem 1.5rem 1.5rem;
+        border-bottom: none;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
     }
 
@@ -129,7 +140,7 @@ footer p {
 
     .data {
         top: 3rem;
-        left: 2rem;
+        left: 2.5rem;
     }
 
     .weather {
@@ -137,9 +148,13 @@ footer p {
         bottom: 3rem;
     }
 
+    /* Required weather pseudo-element for wider view */
+
     .weather h2::after {
         content: " ⛅";
     }
+
+    /* SVG weather icon is only displayed in mobile view */
 
     .weather-icon {
         display: none;
