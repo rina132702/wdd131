@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore Oahu, Hawaii, including information about the island and its tropical weather.">
+    <meta name="author" content="Charina Pahia">
+
+    <title>Oahu, Hawaii | Charina Pahia</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Oahu, Hawaii</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+
+            <picture>
+                <source srcset="images/oahu-large.webp" media="(min-width: 700px)">
+                <img src="images/oahu-small.webp"
+                    alt="Coastal landscape of Oahu, Hawaii"
+                    width="500"
+                    height="333">
+            </picture>
+
+            <section class="card data">
+                <h2>Data</h2>
+
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>597 sq mi</dd>
+
+                    <dt>Population:</dt>
+                    <dd>About 1 million</dd>
+
+                    <dt>Capital:</dt>
+                    <dd>Honolulu</dd>
+
+                    <dt>Languages:</dt>
+                    <dd>English, Hawaiian</dd>
+
+                    <dt>Time Zone:</dt>
+                    <dd>HST (UTC-10)</dd>
+
+                    <dt>Calling Code:</dt>
+                    <dd>+1 808</dd>
+                </dl>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+
+                <img class="weather-icon"
+                    src="images/weather.svg"
+                    alt="Partly cloudy weather icon"
+                    width="70"
+                    height="70">
+
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd>78 °F</dd>
+
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+
+                    <dt>Wind:</dt>
+                    <dd>8 mph</dd>
+
+                    <dt>Wind Chill:</dt>
+                    <dd><span id="wind-chill"></span></dd>
+                </dl>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            🌺 Charina Pahia 🌺 Oahu, Hawaii
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
