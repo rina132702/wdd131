@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore Oahu through meaningful cultural experiences, natural landscapes, local food, and community traditions.">
+    <meta name="author" content="Charina Pahia">
+
+    <title>Rooted in Oahu | Explore Oahu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/project.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/explore.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                Rooted in Oahu
+            </a>
+
+            <button
+                id="menu-button"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+                ☰
+            </button>
+
+            <nav id="primary-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="culture.html">Culture</a>
+                <a href="explore.html" aria-current="page">Explore</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Explore Introduction -->
+        <section class="introduction explore-intro">
+
+            <h1>Explore Oahu</h1>
+
+            <p>
+                Experience Oahu beyond the usual tourist attractions.
+                Discover meaningful connections to the land,
+                Hawaiian culture, and local communities.
+            </p>
+
+            <p>
+                Choose an experience that interests you and
+                explore the island with curiosity and respect.
+            </p>
+
+        </section>
+
+        <!-- Interactive Experience Section -->
+        <section class="explore-section">
+
+            <h2>Discover Island Experiences</h2>
+
+            <p class="explore-description">
+                Browse experiences by category and save
+                your favorites to revisit later.
+            </p>
+
+            <!-- Category Filters -->
+            <div class="filter-buttons" aria-label="Filter experiences">
+
+                <button type="button" class="filter-btn active"
+                    data-filter="all" aria-pressed="true">
+                    All
+                </button>
+
+                <button type="button" class="filter-btn"
+                    data-filter="land" aria-pressed="false">
+                    Land
+                </button>
+
+                <button type="button" class="filter-btn"
+                    data-filter="culture" aria-pressed="false">
+                    Culture
+                </button>
+
+                <button type="button" class="filter-btn"
+                    data-filter="food" aria-pressed="false">
+                    Food
+                </button>
+
+            </div>
+
+            <!-- Cards will be generated using JavaScript -->
+            <div id="experience-container" class="explore-grid"></div>
+
+            <p id="experience-count" aria-live="polite"></p>
+
+        </section>
+
+        <!-- Saved Favorites -->
+        <section class="favorites-section">
+
+            <h2>My Favorite Experiences</h2>
+
+            <p>
+                Save experiences that interest you.
+                Your favorites will remain available
+                when you return to this website.
+            </p>
+
+            <div id="favorites-container"></div>
+
+        </section>
+
+        <!-- Visitor Interest Form -->
+        <section class="interest-section">
+
+            <div class="interest-wrapper">
+
+                <h2>What Connects You to Oahu?</h2>
+
+                <p>
+                    Share what interests you most about
+                    exploring the island.
+                </p>
+
+                <form id="interest-form">
+
+                    <label for="visitor-name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="visitor-name"
+                        name="visitor-name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required>
+
+                    <label for="visitor-interest">
+                        What interests you most?
+                    </label>
+
+                    <select
+                        id="visitor-interest"
+                        name="visitor-interest"
+                        required>
+
+                        <option value="">
+                            Select an interest
+                        </option>
+
+                        <option value="land">
+                            Nature &amp; Land
+                        </option>
+
+                        <option value="culture">
+                            Hawaiian Culture
+                        </option>
+
+                        <option value="food">
+                            Local Food
+                        </option>
+
+                    </select>
+
+                    <label for="visitor-message">
+                        Why does this interest you?
+                    </label>
+
+                    <textarea
+                        id="visitor-message"
+                        name="visitor-message"
+                        rows="4"
+                        placeholder="Share your thoughts..."
+                        required></textarea>
+
+                    <button type="submit" class="button">
+                        Submit
+                    </button>
+
+                </form>
+
+                <!-- JavaScript confirmation -->
+                <p id="form-response" aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+        <!-- Closing Section -->
+        <section class="culture-feature">
+
+            <h2>Explore With Aloha</h2>
+
+            <p>
+                Every experience is an opportunity to
+                learn, appreciate, and respect the people,
+                traditions, and places that make Oahu special.
+            </p>
+
+            <a href="culture.html" class="button">
+                Learn About Hawaiian Culture
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear">2026</span>
+            | Rooted in Oahu | Charina Pahia
+        </p>
+
+        <p id="lastModified"></p>
+
+        <p>
+            <a href="references.html">References</a>
+        </p>
+
+    </footer>
+
+</body>
+</html>
