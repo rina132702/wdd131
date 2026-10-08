@@ -1,0 +1,708 @@
+
+/* =========================================
+   Rooted in Oahu - Main Stylesheet
+   ========================================= */
+
+/* Color Palette */
+:root {
+    --island-green: #315B4A;
+    --warm-sand: #F3E9D2;
+    --earth-brown: #6B4F3A;
+    --island-cream: #FFFDF7;
+    --text-dark: #26352E;
+    --white: #FFFFFF;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    color: var(--text-dark);
+    background-color: var(--island-cream);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.3;
+}
+
+h2 {
+    color: var(--island-green);
+    font-size: 2rem;
+}
+
+a {
+    color: var(--island-green);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   Header and Navigation
+   ========================================= */
+
+header {
+    background-color: var(--island-green);
+    color: var(--white);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+#menu-button {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 0.25rem 0.7rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   Homepage Hero
+   ========================================= */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(20, 45, 35, 0.65),
+            rgba(20, 45, 35, 0.65)
+        ),
+        url("../images/oahu-hero.webp")
+        center / cover no-repeat;
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: var(--warm-sand);
+    color: var(--island-green);
+    padding: 0.85rem 1.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--white);
+}
+
+.button:focus-visible,
+nav a:focus-visible,
+#menu-button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--earth-brown);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   Introduction Sections
+   ========================================= */
+
+.introduction {
+    max-width: 850px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   Featured Sections and Cards
+   ========================================= */
+
+.featured {
+    background-color: var(--warm-sand);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.featured > p {
+    max-width: 800px;
+    margin: 1rem auto 2rem;
+}
+
+.card-container {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: var(--island-cream);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding-bottom: 1.5rem;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.experience-card h3 {
+    color: var(--earth-brown);
+    font-size: 1.4rem;
+    margin: 1.25rem 1.25rem 0.5rem;
+}
+
+.experience-card p {
+    margin: 0.5rem 1.25rem 1rem;
+}
+
+.experience-card a {
+    display: inline-block;
+    margin: 0 1.25rem;
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
+/* Cards Without Images */
+.experience-card:not(:has(img)) {
+    padding-top: 1rem;
+}
+
+/* =========================================
+   Homepage Culture Feature
+   ========================================= */
+
+.culture-feature {
+    max-width: 850px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.culture-feature p {
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   Culture Page
+   ========================================= */
+
+.culture-intro h1 {
+    color: var(--island-green);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+/* Wider sections for photo layouts */
+.culture-wide {
+    max-width: 1100px;
+}
+
+/* Hawaiian Values Cards */
+.culture-card-content {
+    padding-top: 0.25rem;
+}
+
+/* Hula and Lei Making Photos */
+.culture-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.culture-photo-grid figure {
+    margin: 0;
+}
+
+.culture-photo-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Traditional Hawaiian Food */
+.culture-food-photo {
+    max-width: 650px;
+    margin: 2rem auto 0;
+}
+
+.culture-food-photo img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Photo Captions */
+.culture-photo-grid figcaption,
+.culture-food-photo figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--earth-brown);
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+footer {
+    background-color: var(--island-green);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--warm-sand);
+    text-underline-offset: 4px;
+}
+
+/* =========================================
+   Tablet Layout
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .culture-photo-grid img {
+        height: 240px;
+    }
+
+}
+
+/* =========================================
+   Mobile Layout
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    #menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin-top: 1rem;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 0.85rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    /* Homepage Hero */
+    .hero {
+        min-height: 420px;
+        padding: 3rem 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Cards */
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card img {
+        height: 200px;
+    }
+
+    /* Section Spacing */
+    .introduction,
+    .featured,
+    .culture-feature {
+        padding: 3rem 1rem;
+    }
+
+    /* Culture Photo Grid */
+    .culture-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-photo-grid img {
+        height: 220px;
+    }
+
+    .culture-food-photo img {
+        height: 240px;
+    }
+
+}
+
+/* =========================================
+   Accessibility
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .button {
+        transition: none;
+    }
+
+}
+/* =========================================
+   Explore Oahu Page
+   ========================================= */
+
+.explore-intro h1 {
+    color: var(--island-green);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.explore-section,
+.favorites-section,
+.interest-section {
+    padding: 4rem 1.5rem;
+}
+
+.explore-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.explore-description {
+    margin-bottom: 1.5rem;
+}
+
+/* Category Filters */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.7rem 1.4rem;
+    background: var(--island-cream);
+    color: var(--island-green);
+    border: 2px solid var(--island-green);
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--island-green);
+    color: var(--white);
+}
+
+/* Experience Cards */
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.explore-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.explore-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.explore-card h3 {
+    color: var(--earth-brown);
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
+}
+
+.explore-card p {
+    margin: 0 0 1.5rem;
+}
+
+/* Favorite Buttons */
+.favorite-btn {
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--island-green);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--island-green);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.favorite-btn:hover,
+.favorite-btn[aria-pressed="true"] {
+    background: var(--island-green);
+    color: var(--white);
+}
+
+#experience-count {
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+/* Saved Favorites */
+.favorites-section {
+    background: var(--warm-sand);
+    text-align: center;
+}
+
+.favorites-section > p {
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+.favorites-list {
+    max-width: 600px;
+    margin: 1.5rem auto;
+    text-align: left;
+    line-height: 2;
+}
+
+/* Visitor Interest Form */
+.interest-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.interest-wrapper h2,
+.interest-wrapper > p {
+    text-align: center;
+}
+
+#interest-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+#interest-form label {
+    font-weight: 700;
+    color: var(--island-green);
+}
+
+#interest-form input,
+#interest-form select,
+#interest-form textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #8B9A91;
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text-dark);
+    font: inherit;
+    margin-bottom: 0.75rem;
+}
+
+#interest-form textarea {
+    resize: vertical;
+}
+
+#interest-form button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+#form-response {
+    font-weight: 600;
+    color: var(--island-green);
+    margin-top: 1rem;
+}
+
+/* Keyboard Accessibility */
+.filter-btn:focus-visible,
+.favorite-btn:focus-visible,
+#interest-form input:focus-visible,
+#interest-form select:focus-visible,
+#interest-form textarea:focus-visible,
+#interest-form button:focus-visible {
+    outline: 3px solid var(--earth-brown);
+    outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .explore-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-section,
+    .favorites-section,
+    .interest-section {
+        padding: 3rem 1rem;
+    }
+
+    .explore-card img {
+        height: 210px;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* =========================================
+   References Page
+   ========================================= */
+
+.references-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+}
+
+.references-section h2 {
+    margin-top: 2.5rem;
+}
+
+.reference-list {
+    padding-left: 1.5rem;
+    line-height: 1.9;
+}
+
+.reference-list li {
+    margin-bottom: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.references-section a {
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .references-section {
+        padding: 1rem 1rem 3rem;
+    }
+}
